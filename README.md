@@ -105,7 +105,7 @@ Their corresponding dark-frame files contain the variable `DarkFrame`.
 
 ### Axial Stack
 
-The experimental z-scan dataset `data.hdf5` is not included in this GitHub repository because of its large file size (~3.5 GB).
+The experimental z-scan dataset `data.hdf5` is not included in this GitHub repository because of its large file size.
 
 To run `z_scan_analysis.m`, place `data.hdf5` in the same folder as the script. The dataset is currently available from the authors upon request.
 
