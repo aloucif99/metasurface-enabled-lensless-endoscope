@@ -109,14 +109,4 @@ The experimental z-scan dataset `data.hdf5` is not included in this GitHub repos
 
 To run `z_scan_analysis.m`, place `data.hdf5` in the same folder as the script. The dataset is currently available from the authors upon request.
 
-The expected dataset is:
 
-```text
-/frames
-```
-
-with MATLAB dimensions:
-
-```text
-[rows, columns, axial planes]
-```
