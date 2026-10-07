@@ -51,8 +51,8 @@ n_core = 1.48;
 n_clad = 1.45;
 
 g_grin = 2;               % Parabolic GRIN profile
-
-V = 2*pi*a/lambda * sqrt(n_core^2 - n_clad^2);
+Delta_grin = (n_core^2 - n_clad^2) / (2*n_core^2);
+V = k0 * n_core * a * sqrt(2*Delta_grin);
 
 % Marcuse Gaussian approximation for graded-index fiber
 A_grin = sqrt(2/5 * (1 + 4*(2/g_grin)^(5/6)));
