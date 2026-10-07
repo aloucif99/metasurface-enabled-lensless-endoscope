@@ -39,6 +39,8 @@ This loads the supplied GaN lookup table and displays transmission and phase map
 | `psf_fwhm_comparison.m` | Compare MS and SLM focal images, profiles, and FWHM | MS/SLM focus images and corresponding dark frames |
 | `exp_coupling_eff_slm_ms.m` | Calculate the distal-facet core intensity fraction | `DistalEnd_MS.fig` and `DistalEnd_SLM.fig` |
 | `z_scan_analysis.m` | Detect lenslet foci and display experimental X-Z sections | `data.hdf5`, supplied separately |
+| `MinimumFocusingDistance_Sim.m` | Estimates the minimum focusing distance of the mcf |  |
+| `TPEF_Metasurface_ImageAnalysis_v4.m` | TPEF image processing | Beads_300us_5x5mRad.mat / BrainSlice_50ms_7x7mRad.mat / LiveCell_10ms_6x6mRad.mat |
 
 The mode-overlap scripts use `phase_mask_mcf.m` and `local_voronoi_segmentation.m`.
 
@@ -51,6 +53,10 @@ These helper functions are called by the main scripts and do not need to be run 
 Run `psf_fwhm_comparison.m` to compare the measured MS and SLM focal images.
 
 The matching dark frames are subtracted before analysis, and the script displays the focal images, intensity profiles, and fitted FWHM values for direct comparison.
+
+## minimum focusing distance calculation
+
+The script calculates the divergence from the cores of the MCF to estimate the minimum focusing distance. It also estimates the FoV as the diameter of the circle with 50% relative focusing efficiency at the selected distance from the MCF. 
 
 ## Experimental Core-Intensity Fraction
 
@@ -109,4 +115,5 @@ The experimental z-scan dataset `data.hdf5` is not included in this GitHub repos
 
 To run `z_scan_analysis.m`, place `data.hdf5` in the same folder as the script. The dataset is currently available from the authors upon request.
 
-
+### TPEF images
+the raw data obtained with the endoscope. They could be processed and displayed with the function TPEF_Metasurface_ImageAnalysis_v4.m
